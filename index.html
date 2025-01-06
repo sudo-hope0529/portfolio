@@ -321,76 +321,100 @@
 .card .rotate-button:hover {
     color: #FFD700; /* Change color on hover */
 }
-.sidebar {
-            position: fixed;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 20%; 
-            background-color: rgba(52, 58, 64, 0.95); /* Slightly transparent background */
+        body {
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .dark-mode {
+            background-color: #333333;
+            color: #ffffff;
+        }
+        .navbar {
+            background-color: #333;
             color: white;
-            padding: 15px;
-            display: none; /* Initially hidden */
-            z-index: 1000;
-            transition: transform 0.3s ease; /* Smooth transition */
-            transform: translateX(-100%); /* Start off-screen */
+            padding: 10px;
         }
-        .sidebar.show {
-            display: block; /* Show when active */
-            transform: translateX(0); /* Slide in */
-        }
-        .sidebar a {
-            color: white; /* Keep the text color */
-            background-color: transparent; /* Make background transparent */
-            padding: 10px 15px; /* Adjust padding as needed */
-            text-decoration: none; /* Remove underline */
-            display: block; /* Make the link fill the width */
-            border: none; /* Remove any border */
-            transition: transform 0.3s ease; /* Smooth transition for scaling */
-        }
-        .sidebar a:hover {
-            background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a hover effect */
+        .navbar a {
+            color: white;
+            padding: 10px;
             text-decoration: none;
-            transform: scale(1.05); /* Scale up the link slightly */
         }
-        .toggle-btn {
-            cursor: pointer;
-            font-size: 24px;
-            color: white;
-            background: none;
-            border: none;
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .search-container {
+            float: right;
+        }
+        .search-container input {
+            padding: 5px;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        /* Switch styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
             position: absolute;
-            right: 20px; /* Position on the right */
-            top: 10px; /* Position at the top */
-            transition: transform 0.3s ease, opacity 0.3s ease; /* Transition for rotation and opacity */
-        }
-        .toggle-btn.open {
-            transform: rotate(180deg) scale(1.2); /* Rotate and scale when open */
-            opacity: 0.8; /* Slightly fade */
-        }
-        .close-btn {
             cursor: pointer;
-            font-size: 24px;
-            color: white;
-            background: none;
-            border: none;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
             position: absolute;
-            right: 10px; /* Position on the right */
-            top:4px; /* Position at the top */
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
         }
     </style>
 </head>
 <body class="light-mode">
     <header>
-        <a> KRISHNA DWIVEDI</a>
-        <button class="toggle-btn" id="toggleSidebar">☰</button>
-        <button id="toggleTheme" class="toggle-theme-btn">Dark Mode</button>
+        <h1>KRISHNA DWIVEDI</h1>
+        <label class="switch">
+            <input type="checkbox" id="toggleTheme">
+            <span class="slider"></span>
+        </label>
     </header>
 
-    <div class="sidebar" id="sidebar">
-        <button class="close-btn" id="closeSidebar">✖</button>
-        <h2>Menu</h2>
-        <div id="menuItems">
+    <div class="navbar" id="navbar">
+        <h2>Navbar</h2>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search...">
+        </div>
+        <div id="navItems">
             <a href="#" onclick="showSection('introduction')">ABOUT ME</a>
             <a href="#" onclick="showSection('education')">EDUCATION</a>
             <a href="#" onclick="showSection('interests')">INTERESTS</a>
@@ -401,30 +425,7 @@
             <a href="#" onclick="showSection('contact')">CONTACT ME</a>
         </div>
     </div>
-    <script>
-        const sidebar = document.getElementById('sidebar');
-        const toggleSidebar = document.getElementById('toggleSidebar');
-        const closeSidebar = document.getElementById('closeSidebar');
 
-        toggleSidebar.onclick = function() {
-            sidebar.classList.toggle('show'); // Toggle the sidebar visibility
-            toggleSidebar.classList.toggle('open'); // Add rotation and scale effect
-        };
-
-        closeSidebar.onclick = function() {
-            sidebar.classList.remove('show'); // Close the sidebar
-            toggleSidebar.classList.remove('open'); // Reset rotation and scale
-        };
-
-        // Close sidebar when clicking anywhere in the sidebar
-        sidebar.addEventListener('click', function(event) {
-            // Check if the click is not on the close button
-            if (event.target !== closeSidebar) {
-                sidebar.classList.remove('show'); // Close the sidebar
-                toggleSidebar.classList.remove('open'); // Reset rotation and scale
-            }
-        });
-    </script>
     <main>
         <div class="content">
             <section id="introduction" class="active">
@@ -444,7 +445,7 @@
                 </div>
         
                 <div class="education-item">
-                    <div class="space_btw">
+                                        <div class="space_btw">
                         <h3>Krishna's Vikash Institute of Technology</h3>
                         <span class="date">(Sept. 2023 - Present)</span>
                     </div> 
@@ -568,7 +569,7 @@
             </section>
 
             <section id="contact">
-                <h2>Contact Me</h2>
+                               <h2>Contact Me</h2>
                 <form id="contactForm" aria-label="Contact Form">
                     <input type="text" name="name" placeholder="Your Name" required aria-required="true">
                     <input type="email" name="email" placeholder="Your Email" required aria-required="true">
@@ -624,12 +625,12 @@
             const activeSection = document.getElementById(sectionId);
             activeSection.classList.add('active');
         }
+
         // Dark/Light mode toggle
-        document.getElementById('toggleTheme').addEventListener('click', function() {
+        document.getElementById('toggleTheme').addEventListener('change', function() {
             const body = document.body;
             body.classList.toggle('dark-mode');
             body.classList.toggle('light-mode');
-            this.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
         });
 
         // Contact form submission handling
@@ -653,6 +654,16 @@
 
         // Load the introduction section by default
         showSection('introduction');
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const navItems = document.querySelectorAll('#navItems a');
+            navItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(query) ? 'block' : 'none';
+            });
+        });
     </script>
 </body>
 </html>
