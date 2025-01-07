@@ -7,7 +7,8 @@
     <style>
         body {
             width: auto;
-            height: 100%;
+            height: auto;
+            border: #000000;
         }
         body.light-mode {
             background-color: #ffffff;
@@ -109,7 +110,6 @@
             90% { clip: rect(43px, 9999px, 15px, 0); }
             100% { clip: rect(78px, 9999px, 30px, 0); }
         }
-
         @keyframes glitch-skew {
             0%, 40% { transform: skew(-2deg); }
             10%, 100%, 50% { transform: skew(-1deg); }
@@ -274,11 +274,17 @@
         section.active {
             display: contents;
         }
+        .readable-text {
+            font-size: 18px; 
+            font-family: Arial, sans-serif;
+            line-height: 1.6; 
+            margin: 20px 0; 
+            color: #333;
+        }
 
         .education-item {
             margin-bottom: 20px;
         }
-
         .space_btw {
             display: flex;
             justify-content: space-between;
@@ -320,22 +326,22 @@
             padding: 20px;
         }
         .card {
-            perspective: 1200px; /* Adjust perspective */
-            position: relative; /* Ensure positioning */
-            height: 350px; /* Set a fixed height */
+            perspective: 1200px; 
+            position: relative; 
+            height: 350px;
             width: 220px;
         }
         .card-inner {
-            position: absolute; /* Keep this */
+            position: absolute; 
             width: 220px;
             height: 290px;
             transition: transform 0.6s;
             transform-style: preserve-3d;
             cursor: pointer;
-            transform-origin: center; /* Center the rotation */
+            transform-origin: center; 
         }
         .card:hover .card-inner {
-            transform: rotateY(180deg); /* Rotate the inner card */
+            transform: rotateY(180deg);
         }
         .card-front, .card-back {
             position: absolute;
@@ -369,7 +375,7 @@
             margin: 0;
             font-size: 1.5em;
             font-weight: bold; /* Make module name bold */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shine effect */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         .card p {
             margin: 10px 0;
@@ -390,7 +396,7 @@
             background-color: #007acc;
             text-align: center;
             color: white;
-            line-height: 20px; /* Center text vertically */
+            line-height: 20px;
         }
 
         .testimonial {
@@ -404,12 +410,13 @@
         <div class="content">
             <section id="introduction" class="active">
                 <h2>Welcome to my portfolio</h2>
-                <p> Namaste, I’m Krishna Dwivedi, a dedicated and passionate individual with a strong inclination towards cybersecurity, Ethical-Hacking, & Web Development and a passion for innovative problem-solving...</p> 
-                <p> My journey in the tech world is driven by a commitment to enhancing information security and a continuous pursuit of knowledge in emerging technologies.</p>
-                <p> I pride myself on my ability to collaborate effectively within team environments, bringing a blend of analytical thinking and creative problem-solving to the table. My adherence to privacy standards and dedication to maintaining confidentiality are cornerstones of my professional ethos.</p>
-                <p> Beyond the technical realm, I have a keen interest in implementing learned concepts in real-world scenarios, which fuels my innovative approach to challenges. In my leisure time, I indulge in book reading, which broadens my perspective, and nature photography, allowing me to capture the world’s beauty through my lens.</p>
-                <p> This portfolio is a reflection of my skills, experiences, and the passion I bring to the field of cybersecurity, Ethical-Hacking, and Innovative Problem Solving.</p>
-                <p> I invite you to explore my work and connect with me to discuss potential collaborations or opportunities.</p>
+                <div class="head-divider"></div>
+                <p class="readable-text"> <strong>Namaste</strong>, I’m Krishna Dwivedi, a dedicated and passionate individual with a strong inclination towards <strong>Cyber Security</strong>, <strong>Ethical-Hacking</strong>, & <strong>Web Development</strong> and a passion for innovative problem-solving...</p> 
+                <p class="readable-text"> My journey in the tech world is driven by a <strong>commitment to enhancing information security</strong> and a continuous pursuit of knowledge in emerging technologies.</p>
+                <p class="readable-text"> I pride myself on my ability to <strong>collaborate effectively within team environments</strong>, bringing a blend of analytical thinking and creative problem-solving to the table. My adherence to privacy standards and dedication to maintaining <strong>confidentiality</strong> are cornerstones of my professional ethos.</p>
+                <p class="readable-text"> Beyond the technical realm, I have a keen interest in implementing learned concepts in real-world scenarios, which fuels my <strong>innovative approach to challenges</strong>. In my leisure time, I indulge in <strong>book reading</strong>, which broadens my perspective, and nature photography, allowing me to capture the world’s beauty through my lens.</p>
+                <p class="readable-text"> This portfolio is a reflection of my skills, experiences, and the passion I bring to the field of cybersecurity, Ethical-Hacking, and Innovative Problem Solving.</p>
+                <p class="readable-text"> <strong>I invite you to explore my work and connect with me to discuss potential collaborations or opportunities.</strong></p>
             </section>
 
             <section id="education">
@@ -420,8 +427,8 @@
                         <span class="date">(Aug. 2024 – Nov. 2024)</span>
                     </div>
                     <div class="divider-bottom"></div>
-                    <p>Aspire Leadership Program Cohort-3</p>
-                    <p>Coursework: Addressing Community Problems, Project Creating, Communication, Networking, Presentation, Resume Crafting, etc.</p>
+                    <p class="readable-text"><strong>Aspire Leadership Program Cohort-3</strong></p>
+                    <p class="readable-text"><strong>Coursework:</strong> Addressing Community Problems, Project Creating, Communication, Networking, Presentation, Resume Crafting, etc.</p>
                 </div>
         
                 <div class="education-item">
@@ -430,8 +437,8 @@
                         <span class="date">(Sept. 2023 - Present)</span>
                     </div> 
                     <div class="divider-bottom"></div>
-                    <p>Bachelor of Technology – CSE</p>
-                    <p>Coursework: Programming in C, Data Structures & Algorithms, Operating Systems, etc.</p>
+                    <p class="readable-text"><strong>Bachelor of Technology – CSE</strong></p>
+                    <p class="readable-text"><strong>Coursework:</strong> Programming in C, Data Structures & Algorithms, Operating Systems, etc.</p>
                 </div>
             </section>        
 
@@ -440,13 +447,13 @@
                 <div class="project-item">
                     <h3>Worker’s Salary Hike and Data Management System</h3>
                     <div class="divider-bottom"></div>
-                    <p>Developed a user-friendly site using Java, MySQL, Figma, and Laravel.</p>
+                    <p class="readable-text">Developed a user-friendly site using Java, MySQL, Figma, and Laravel.</p>
                     <a href="https://example.com/project1" target="_blank">View Project</a>
                 </div>
                 <div class="project-item">
                     <h3>Disclosed Soon...</h3>
                     <div class="divider-bottom"></div>
-                    <p>Description</p>
+                    <p class="readable-text">Description</p>
                     <a href="https://example.com/project2" target="_blank">View Project</a>
                 </div>
             </section>
@@ -454,10 +461,10 @@
             <section id="interests">
                 <h2>Interests / Hobbies</h2>
                 <ul>
-                    <li>Implementing learned concepts in real-world scenarios.</li>
-                    <li>Reading articles to boost professional knowledge.</li>
-                    <li>Participating in cybersecurity competitions and hackathons.</li>
-                    <li>Exploring new technologies and programming languages.</li>
+                    <li class="readable-text">Implementing learned concepts in real-world scenarios.</li>
+                    <li class="readable-text">Reading articles to boost professional knowledge.</li>
+                    <li class="readable-text">Participating in cybersecurity competitions and hackathons.</li>
+                    <li class="readable-text">Exploring new technologies and programming languages.</li>
                 </ul>
             </section>
 
@@ -470,7 +477,7 @@
                                 <h3>Adherence</h3>
                             </div>
                             <div class="card-back">
-                                <p>Strong adherence to privacy standards</p>
+                                <p class="readable-text">Strong adherence to privacy standards</p>
                             </div>
                         </div>
                     </div>
@@ -480,7 +487,7 @@
                                 <h3>Consistency</h3>
                             </div>
                             <div class="card-back">
-                                <p>Punctual, hardworking, and consistently seeking growth opportunities.</p>
+                                <p class="readable-text">Punctual, hardworking, and consistently seeking growth opportunities.</p>
                             </div>
                         </div>
                     </div>
@@ -490,7 +497,7 @@
                                 <h3>Learning</h3>
                             </div>
                             <div class="card-back">
-                                <p>Quick learner with a passion for technology</p>
+                                <p class="readable-text">Quick learner with a passion for technology</p>
                             </div>
                         </div>
                     </div>
@@ -500,7 +507,7 @@
                                 <h3>Team Player</h3>
                             </div>
                             <div class="card-back">
-                                <p>Ability to work collaboratively in team environments.</p>
+                                <p class="readable-text">Ability to work collaboratively in team environments.</p>
                             </div>
                         </div>
                     </div>
@@ -510,7 +517,7 @@
                                 <h3>Excellent problem-solving skills</h3>
                             </div>
                             <div class="card-back">
-                                <p>Proficient in analyzing complex issues and providing effective solutions.</p>
+                                <p class="readable-text">Proficient in analyzing complex issues and providing effective solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -520,7 +527,7 @@
                                 <h3>Strong communication skills</h3>
                             </div>
                             <div class="card-back">
-                                <p>Ability to convey ideas clearly and effectively.</p>
+                                <p class="readable-text">Ability to convey ideas clearly and effectively.</p>
                             </div>
                         </div>
                     </div>
@@ -530,7 +537,7 @@
                                 <h3>Adaptability</h3>
                             </div>
                             <div class="card-back">
-                                <p>Quickly adjusts to new situations and challenges.</p>
+                                <p class="readable-text">Quickly adjusts to new situations and challenges.</p>
                             </div>
                         </div>
                     </div>
@@ -543,25 +550,25 @@
                     <h3>Technical Skills</h3>
                     <div class="divider-bottom"></div>
                     <div class="skill">
-                        <span>Cyber Security</span>
+                        <span><strong>Cyber Security</strong></span>
                         <div class="progress">
                             <div class="progress-bar" style="width: 80%;">80%</div>
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Python</span>
+                        <span><strong>Python</strong></span>
                         <div class="progress">
                             <div class="progress-bar" style="width: 70%;">70%</div>
                         </div>
                     </div>
                     <div class="skill">
-                        <span>Flask</span>
+                        <span><strong>Flask</strong></span>
                         <div class="progress">
                             <div class="progress-bar" style="width: 75%;">75%</div>
                         </div>
                     </div>
                     <div class="skill">
-                        <span>C</span>
+                        <span><strong>C</strong></span>
                         <div class="progress">
                             <div class="progress-bar" style="width: 25%;">25%</div>
                         </div>
@@ -569,15 +576,18 @@
                 </div>
                 <h3>Soft Skills</h3>
                 <div class="divider-bottom"></div>
-                <p>Communication</p> <p>Problem-solving</p> <p>Teamwork</p> <p>Adaptability</p>
+                <p class="readable-text"><strong>Communication</strong></p> 
+                <p class="readable-text"><strong>Problem-solving</strong></p> 
+                <p class="readable-text"><strong>Teamwork</strong></p> 
+                <p class="readable-text"><strong>Adaptability</strong></p>
             </section>
 
             <section id="testimonials">
                 <h2>Testimonials</h2>
-                <div class="testimonial">
+                <div class="testimonial" class="readable-text">
                     "An exceptional developer who consistently delivers high-quality work." - Client A
                 </div>
-                <div class="testimonial">
+                <div class="testimonial" class="readable-text">
                     "A great team player with a strong understanding of cybersecurity." - Colleague B
                 </div>
             </section>
@@ -593,6 +603,7 @@
             const activeSection = document.getElementById(sectionId);
             activeSection.classList.add('active');
         }
+
         // Load the introduction section by default
         showSection('introduction');
     </script>
@@ -604,7 +615,7 @@
             color: #ffffff; /* Readable text color */
             font-family: 'Segoe UI', sans-serif;
             padding: 20px 0;
-            margin-top: 100px;
+            margin-top: 60px;
             
         }
         .footer-dark {
@@ -619,7 +630,11 @@
             max-width: 1140px;
             margin: auto;
             padding: 0px 20px;
-
+        }
+        .footer-content img {
+            height: 50px; /* Set a consistent height */
+            width: 100px;
+            object-fit: contain; /* Maintain aspect ratio */
         }
         .footer-divider {
             width: 80%;
@@ -636,14 +651,15 @@
     <footer>
         <div class="footer-dark">
                     <div class="footer-content">
-                        <a class="fas fa-credly" href="#credly"><span class="footer-link-3">Credly</span></a>
-                        <a href="#github Link"><span class="footer-link-3">Git-Hub</span></a>
-                        <a href="#LinkedIn link"><span class="footer-link-3">Linkedin</span></a>
-                        <a href="#email"><span class="footer-link-3"></span>Email</a>
+                        <a href="https://www.credly.com/users/krishna-dwivedi.a2ae4587" target="_blank"><img src="https://cdn.brandfetch.io/idmNA6ktKL/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="Credly"></a>
+                        <a href="https://www.linkedin.com/in/krishna-d-3725b3308" target="_blank"><img src="https://cdn.brandfetch.io/idJFz6sAsl/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="LinkedIn"></a>
+                        <a href="https://github.com/sudo-hope0529" target="_blank"><img src="https://cdn.brandfetch.io/idZAyF9rlg/w/1000/h/410/theme/dark/logo.png?c=1bfwsmEH20zzEfSNTed" alt="GitHub"></a>
+                        <a href="mailto:hope.techdev@gmail.com"><img src="https://cdn.brandfetch.io/id5o3EIREg/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="Email"></a>
                     </div>
                 <div class="footer-divider"></div>
                 <div class="footer-copyright-center">Copyright © 2025 Krishna Dwivedi. All Rights Reserved.</div>
             </div>
     </footer>
+ <!-- Footer Corner Ending -->
 </body>
 </html>
