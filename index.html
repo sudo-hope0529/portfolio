@@ -35,7 +35,8 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            width: 700px;
+            text-align: center; /* changes*/
+            width: 94%;  /*changes*/
         }
         .slogan-container {
             display: flex;
@@ -168,19 +169,21 @@
         .navbar {
             background: linear-gradient(45deg, rgba(39, 35, 151, 1) 12%, rgba(55, 50, 179, 1) 31%, rgba(39, 35, 151, 1) 90%);
             display: flex;
+            flex-wrap: wrap; /* new change for better alignment of nav Items*/
             justify-content: space-between;
             width: 100%;
+            padding: 0;
             margin-top: 24px;
         }
         .navbar a {
-            color: rgb(82, 10, 252);
+            color: rgb(118, 67, 248);
             padding: 3px;
             text-decoration: solid;
             margin: 4px;
             size: 10px;
         }
         .navbar a:hover {
-            color: rgb(79, 8, 243);
+            color: rgb(219, 211, 238);
             background: linear-gradient(45deg, rgba(39, 35, 151, 1) 12%, rgba(55, 50, 179, 1) 31%, rgba(39, 35, 151, 1) 90%);
             transform: scale(1.4);
         }
@@ -265,7 +268,6 @@
             this.textContent = body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
         });
 
-        // section toggle or switch
     </script>
     <style>
         .content {
@@ -377,7 +379,7 @@
         .card h3 {
             margin: 0;
             font-size: 1.5em;
-            font-weight: bold; /* Make module name bold */
+            font-weight: bold;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         .card p {
@@ -412,13 +414,13 @@
     <main>
         <div class="content">
             <section id="introduction" class="active">
-                <h2>Welcome to my portfolio</h2>
+                <h2>Welcome to my Portfolio</h2>
                 <div class="head-divider"></div>
                 <p class="readable-text"> <strong>Namaste</strong>, I’m Krishna Dwivedi, a dedicated and passionate individual with a strong inclination towards <strong>Cyber Security</strong>, <strong>Ethical-Hacking</strong>, & <strong>Web Development</strong> and a passion for innovative problem-solving...</p> 
-                <p class="readable-text"> My journey in the tech world is driven by a <strong>commitment to enhancing information security</strong> and a continuous pursuit of knowledge in emerging technologies.</p>
+                <p class="readable-text"> My journey in the tech world is driven by a <strong>commitment to enhancing information security</strong> and a continuous <strong>pursuit of knowledge</strong> in emerging technologies.</p>
                 <p class="readable-text"> I pride myself on my ability to <strong>collaborate effectively within team environments</strong>, bringing a blend of analytical thinking and creative problem-solving to the table. My adherence to privacy standards and dedication to maintaining <strong>confidentiality</strong> are cornerstones of my professional ethos.</p>
                 <p class="readable-text"> Beyond the technical realm, I have a keen interest in implementing learned concepts in real-world scenarios, which fuels my <strong>innovative approach to challenges</strong>. In my leisure time, I indulge in <strong>book reading</strong>, which broadens my perspective, and nature photography, allowing me to capture the world’s beauty through my lens.</p>
-                <p class="readable-text"> This portfolio is a reflection of my skills, experiences, and the passion I bring to the field of cybersecurity, Ethical-Hacking, and Innovative Problem Solving.</p>
+                <p class="readable-text"> This portfolio is a reflection of my skills, experiences, and the passion I bring to the field of cybersecurity, Ethical-Hacking, Web Development and Innovative Problem Solving.</p>
                 <p class="readable-text"> <strong>I invite you to explore my work and connect with me to discuss potential collaborations or opportunities.</strong></p>
             </section>
 
@@ -465,8 +467,10 @@
                 <h2>Interests / Hobbies</h2>
                 <ul>
                     <li class="readable-text">Implementing learned concepts in real-world scenarios.</li>
+                    <li class="readable-text">Book reading and listening AudioBooks to broaden my perspective.</li>
+                    <li class="readable-text">Nature photography(only casual) and capturing the world’s beauty.</li>
                     <li class="readable-text">Reading articles to boost professional knowledge.</li>
-                    <li class="readable-text">Participating in cybersecurity competitions and hackathons.</li>
+                    <li class="readable-text">Participating in competitions and hackathons.</li>
                     <li class="readable-text">Exploring new technologies and programming languages.</li>
                 </ul>
             </section>
@@ -615,7 +619,7 @@
         footer {
             width: 100%;
             background: linear-gradient(45deg, rgba(39, 35, 151, 1) 12%, rgba(55, 50, 179, 1) 31%, rgba(39, 35, 151, 1) 90%);
-            color: #ffffff; /* Readable text color */
+            color: #ffffff;
             font-family: 'Segoe UI', sans-serif;
             padding: 20px 0;
             margin-top: 60px;
@@ -634,9 +638,12 @@
             margin: auto;
             padding: 0px 20px;
         }
+        .icon:hover {
+            transform: scale(1.1);
+        }
         .footer-content img {
             height: 50px; /* Set a consistent height */
-            width: 100px;
+            width: 100px; 
             object-fit: contain; /* Maintain aspect ratio */
         }
         .footer-divider {
@@ -654,15 +661,14 @@
     <footer>
         <div class="footer-dark">
                     <div class="footer-content">
-                        <a href="https://www.credly.com/users/krishna-dwivedi.a2ae4587" target="_blank"><img src="https://cdn.brandfetch.io/idmNA6ktKL/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="Credly"></a>
-                        <a href="https://www.linkedin.com/in/krishna-d-3725b3308" target="_blank"><img src="https://cdn.brandfetch.io/idJFz6sAsl/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="LinkedIn"></a>
-                        <a href="https://github.com/sudo-hope0529" target="_blank"><img src="https://cdn.brandfetch.io/idZAyF9rlg/w/1000/h/410/theme/dark/logo.png?c=1bfwsmEH20zzEfSNTed" alt="GitHub"></a>
-                        <a href="mailto:hope.techdev@gmail.com"><img src="https://cdn.brandfetch.io/id5o3EIREg/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="Email"></a>
+                        <a href="https://www.credly.com/users/krishna-dwivedi.a2ae4587" target="_blank" class="icon"><img src="https://cdn.brandfetch.io/idmNA6ktKL/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="Credly"></a>
+                        <a href="https://www.linkedin.com/in/krishna-d-3725b3308" target="_blank" class="icon"><img src="https://cdn.brandfetch.io/idJFz6sAsl/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="LinkedIn"></a>
+                        <a href="https://github.com/sudo-hope0529" target="_blank" class="icon"><img src="https://cdn.brandfetch.io/idZAyF9rlg/w/1000/h/410/theme/dark/logo.png?c=1bfwsmEH20zzEfSNTed" alt="GitHub"></a>
+                        <a href="mailto:hope.techdev@gmail.com" class="icon"><img src="https://cdn.brandfetch.io/id5o3EIREg/theme/dark/logo.svg?c=1bfwsmEH20zzEfSNTed" alt="Email"></a>
                     </div>
                 <div class="footer-divider"></div>
                 <div class="footer-copyright-center">Copyright © 2025 Krishna Dwivedi. All Rights Reserved.</div>
             </div>
     </footer>
- <!-- Footer Corner Ending -->
 </body>
 </html>
