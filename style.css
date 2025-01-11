@@ -5,9 +5,10 @@
    width: 100%;
    height: 100%;
    z-index: 9999;
-   background: #ffffff url('https://i.gifer.com/VZvw.gif') no-repeat center center;
-   /* alternate loader 1: https://i.gifer.com/yy3.gif */
-   /* alternate loader 2: https://i.gifer.com/Vp3R.gif */
+   background: #ffffff url('Assets/Anim/Preloader/VZvw.gif') no-repeat center center;
+   /* alternate loader 1: https://i.gifer.com/VZvw.gif */
+   /* alternate loader 2: https://i.gifer.com/yy3.gif */
+   /* alternate loader 3: https://i.gifer.com/Vp3R.gif */
 }
 body {
    width: auto;
@@ -29,7 +30,7 @@ body.dark-mode {
        color: #211e1e;
    }
    .ripple-background {
-      background: url('ripple-line-dark.svg') repeat-x
+      background: url('Assets/Anim/Ripple-line/ripple-line-dark.svg') repeat-x;
    }
 }
 .hero {
@@ -350,7 +351,7 @@ h3 {
 .ripple-background {
    width: 100%;
    height: 77px;
-   background: url('ripple-line-light.svg') repeat-x;
+   background: url('Assets/Anim/Ripple-line/ripple-line-light.svg') repeat-x;
    animation: ripple-animation 10s linear infinite;
    margin-top: 40px;
 }
