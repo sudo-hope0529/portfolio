@@ -2,8 +2,10 @@
 
 ---
 
-**Effective Date:**  14/01/2025
+**Effective Date:** 14/01/2025
+
 **Author:** Krishna Dwivedi
+
 **Portfolio URL:** https://github.com/sudo-hope0529/portfolio/
 
 ---
@@ -80,8 +82,10 @@ By accessing or using the Portfolio, the User acknowledges that they have read, 
 
 ---
 
-**Contact Information:**  
+**Contact Information:**
+
 KRISHNA DWIVEDI 
+
 hope.techdev@gmail.com
 
 ---
