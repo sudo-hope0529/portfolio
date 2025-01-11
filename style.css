@@ -15,6 +15,7 @@ body {
    height: auto;
    border: #000000;
    margin: 0;
+   user-select: none;
 }
 body.light-mode {
    background-color: #ffffff;
