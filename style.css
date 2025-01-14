@@ -56,8 +56,8 @@ body.dark-mode {
    justify-content: space-between; 
    align-items: center;
    width: 700;
-   margin-left: 94px;
-   margin-right: 140px;
+   margin-left: 21%;
+   margin-right: 26%;
    padding-right: 4px;
    background: linear-gradient(45deg, rgba(39, 35, 151, 1) 12%, rgba(55, 50, 179, 1) 31%, rgba(39, 35, 151, 1) 90%);
    color: #9997FF;
